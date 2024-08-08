@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar da Praia</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(imagens-bar/coconut-palm-trees-tropical-background.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            color: #333;
+            overflow-x: hidden;
+            height: 100vh; /* Ajusta a altura do corpo para ocupar toda a tela */
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh; /* Ocupa toda a altura da tela */
+            position: relative;
+            padding: 2rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 1rem;
+            font-size: 2rem;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            padding: 1rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparente para contraste */
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aumenta o tamanho das colunas */
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .image-item {
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding-top: 75%; /* Ajusta a proporção */
+            position: relative;
+            border: 2px solid #fff; /* Adiciona borda branca */
+            cursor: pointer;
+        }
+
+        .image-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .v2323_3 { background-image: url("imagens-bar/v2323_3.png"); }
+        .v2323_4 { background-image: url("imagens-bar/v2323_4.png"); }
+        .v2323_5 { background-image: url("imagens-bar/v2323_5.png"); }
+        .v2323_6 { background-image: url("imagens-bar/v2323_6.png"); }
+        .v2323_7 { background-image: url("imagens-bar/v2323_7.png"); }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, .modal-caption {
+            animation: zoom 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
+            <h2>Projetos Bar Da Praia</h2>
+            <p>Skills - Fotografia</p>
+            <p>Campanha de Verão</p>
+        </div>
+        <div class="image-grid">
+            <div class="image-item v2323_3" onclick="openModal('imagens-bar/v2323_3.png')"></div>
+            <div class="image-item v2323_4" onclick="openModal('imagens-bar/v2323_4.png')"></div>
+            <div class="image-item v2323_5" onclick="openModal('imagens-bar/v2323_5.png')"></div>
+            <div class="image-item v2323_6" onclick="openModal('imagens-bar/v2323_6.png')"></div>
+            <div class="image-item v2323_7" onclick="openModal('imagens-bar/v2323_7.png')"></div>
+        </div>
+    </div>
+
+    <!-- Modal para visualização da imagem -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+

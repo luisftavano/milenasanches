@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Milena</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f8ff; /* Azul claro para o fundo */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            color: #333;
+            padding: 2rem 1rem;
+        }
+
+        .decorative-border {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            z-index: 1;
+            background: repeating-linear-gradient(
+                45deg,
+                #000,
+                #000 10px,
+                #fff 10px,
+                #fff 20px
+            ); /* Listras preto e branco */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: borderAnimation 4s linear infinite; /* Animação */
+        }
+
+        .decorative-border.left {
+            left: 0;
+        }
+
+        .decorative-border.right {
+            right: 0;
+        }
+
+        @keyframes borderAnimation {
+            0% { transform: scaleY(1); }
+            50% { transform: scaleY(1.2); }
+            100% { transform: scaleY(1); }
+        }
+
+        .content {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 900px;
+            margin: 1rem;
+            z-index: 2;
+            text-align: left; /* Alinhar o texto à esquerda */
+            position: relative; /* Para garantir que o container esteja acima das bordas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #000000; /* Nova cor vibrante para o título */
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-align: center; /* Mantendo o título centralizado */
+        }
+
+        p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .photo-gallery img {
+            width: calc(50% - 1rem); /* Dois itens por linha */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .photo-gallery img {
+                width: calc(100% - 1rem); /* Um item por linha em telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-border left"></div>
+    <div class="decorative-border right"></div>
+    <div class="content">
+        <h1>Sobre Mim</h1>
+        <p>
+            Prazer, Milena <br>
+            Estou cursando Publicidade e Propaganda na Faculdade Cásper Líbero, no sexto semestre.
+            Atualmente, estou estagiando na TV Gazeta, na área de chamadas (comunicação social).
+            A TV está me dando inúmeras oportunidades, estou conhecendo muitas pessoas e culturas novas, 
+            sem contar que acompanhar uma emissora por trás das câmeras é muito surpreendente!
+            Amo todas as áreas da comunicação e me considero muito extrovertida.
+            Já tive experiências com fotografia, eventos, social media, inglês, produção, redação e assessoria.
+        </p>
+        <div class="photo-gallery">
+            <img src="sobremim/mi1.jpeg" alt="Foto 1">
+            <img src="sobremim/mi2.jpeg" alt="Foto 2">
+            <img src="sobremim/mi3.jpeg" alt="Foto 3">
+            <img src="sobremim/mi4.jpeg" alt="Foto 4">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    <header class="header-container">
+        <img src="images/chatona tu.png" class="header-image" alt="Background Image">
+        <div class="header">
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu"></div>
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="sobremim.html">Sobre Mim</a>
+                            </li>
+                            <li class="menu-item-projetos">
+                                <a href="#" id="projects-link">Projetos</a>
+                                <ul class="submenu" id="projects-submenu">
+                                    <li><a href="donatera.html">Dona Têra</a></li>
+                                    <li><a href="bardapraia.html">Bar da Praia</a></li>
+                                    <li><a href="gazeta.html">Projeto TV Gazeta</a></li>
+                                    <li><a href="intercambio.html">Intercâmbio</a></li>
+                                    <li><a href="faculdade.html">Faculdade</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        
+            <h1> Milena Sanches Parra </h1>
+        
+        
+        <p>Estudante de publicidade e propaganda - Faculdade Cásper Líbero <br> Estagiária de Produção - TV Gazeta</br> </p>
+        <h2> Social Media</h2>
+        
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/milena-sanches-parra-130598240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                <img src="linkedin.png" class="linkedin" alt="LinkedIn">
+                <a href="mailto: mimisanchesparra@gmail.com" target="_blank">
+                    <img src="imagens-bar/google mail.svg" class="linkedin" alt="Gmail">
+                </a>
+            </div>
+            </a>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectsLink = document.getElementById('projects-link');
+            const submenu = document.getElementById('projects-submenu');
+
+            projectsLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                submenu.classList.toggle('visible');
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!projectsLink.contains(event.target) && !submenu.contains(event.target)) {
+                    submenu.classList.remove('visible');
+                }
+            });
+
+            const toggle = document.getElementById('toggle');
+            const linkedinImage = document.querySelector('.social-media');
+
+            toggle.addEventListener('change', function() {
+                if (this.checked) {
+                    linkedinImage.style.display = 'none';
+                } else {
+                    linkedinImage.style.display = 'flex';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos TV Gazeta</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #b2d0f4, #eaf4f4);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px; /* Reduz a largura máxima do container */
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #005a99;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .thumbnail-container {
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            max-width: 900px; /* Ajusta a largura máxima das imagens */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 400px; /* Ajusta a largura máxima dos vídeos */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .description strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail-container h2 {
+            margin-bottom: 10px;
+            color: #005a99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Projetos TV Gazeta</h1>
+
+        <div class="thumbnail-container" onclick="toggleVideos('maes-videos')">
+            <h2>Campanha de Dia das Mães</h2>
+            <img src="video_gazeta/capa-gazeta.png" alt="Campanha de Dia das Mães">
+        </div>
+        <div id="maes-videos" class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iQdJu4JDsTE?si=DIrw-SKZ5yYqj7qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Dh7WQTbdiF0?si=GUtvcdX3O8YgZcW3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="thumbnail-container" onclick="toggleVideos('outro-video')">
+            <h2>Institucional do Jornal da Gazeta</h2>
+            <img src="video_gazeta/capa-jornal.jpeg" alt="Institucional do Jornal da Gazeta">
+        </div>
+        <div id="outro-video" class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mS739G1ApaY?si=kOO20CmGrVdZkOMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Novo Vídeo -->
+        <div class="thumbnail-container" onclick="toggleVideos('novo-video')">
+            <h2>Fundação Casper Líbero</h2>
+            <img src="video_gazeta/Screenshot 2024-08-06 at 21.03.21.png" alt="Novo Projeto">
+        </div>
+        <div id="novo-video" class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tyL6yOyHEsw?si=-KTjJjUlzznBB8vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="description">
+            Auxiliar de produção dos vídeos.<br>
+            OBS: Todos os vídeos foram gravados no meu aparelho telefone e foram transmitidos em rede nacional.
+        </div>
+    </div>
+
+    <script>
+        function toggleVideos(containerId) {
+            const container = document.getElementById(containerId);
+            if (container.style.display === "none" || container.style.display === "") {
+                container.style.display = "grid";
+            } else {
+                container.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
